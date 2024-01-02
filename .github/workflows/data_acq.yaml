@@ -33,7 +33,9 @@ jobs:
 
     - name: Initialize DVC
       run: |
-        dvc init
+        if [ ! -d ".dvc" ]; then
+          dvc init
+        fi
 
     - name: Run Data Collection
       run: python src/random_data.py
