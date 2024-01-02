@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/University/Semester%207/MLOPs/Project/project/src/mlruns/0/ca8efad08fca49c3ae8fdb41e38c7b97/artifacts
+end_time: 1704225240391
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ca8efad08fca49c3ae8fdb41e38c7b97
+run_name: hilarious-bird-946
+run_uuid: ca8efad08fca49c3ae8fdb41e38c7b97
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704225235573
+status: 3
+tags: []
+user_id: hadiy
