@@ -36,7 +36,7 @@ jobs:
         dvc init
 
     - name: Run Data Collection
-      run: python random_data.py
+      run: python src/random_data.py
 
     - name: Commit Changes
       run: |
