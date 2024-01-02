@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/University/Semester%207/MLOPs/Project/project/src/mlruns/0/2af5caf696034f78aa77d9c42f78a4f4/artifacts
+end_time: 1704220507187
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2af5caf696034f78aa77d9c42f78a4f4
+run_name: bittersweet-yak-884
+run_uuid: 2af5caf696034f78aa77d9c42f78a4f4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704220499692
+status: 3
+tags: []
+user_id: hadiy
