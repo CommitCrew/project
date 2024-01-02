@@ -40,6 +40,7 @@ jobs:
 
     - name: Commit Changes
       run: |
+        dvc add dummy_sensor_data.csv
         git add dummy_sensor_data.csv.dvc
         git commit -m "Adding Data"
         git push origin i200603
