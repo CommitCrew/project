@@ -1,0 +1,51 @@
+name: Data Collection
+
+on:
+  push:
+    branches:
+      - i200603  
+
+jobs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Configurations
+      run: |
+        git config --local user.email "${{ secrets.GIT_USER_EMAIL }}"
+        git config --local user.name "${{ secrets.GIT_USER_NAME }}"
+        
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r dvc dvc-gdrive numpy pandas
+
+    - name: Initialize DVC
+      run: |
+        dvc init
+
+    - name: Run Data Collection
+      run: python random_data.py
+
+    - name: Authenticate DVC with Google Drive
+      run: |
+        dvc add dummy_sensor_data.csv
+        git add .gitignore dummy_sensor_data.csv.dvc
+        git commit -m "Adding Data"
+        git push origin i200603
+        dvc remote add --default drive gdrive://1wG7W8Dgf9AP26zZWKyEl285Oz-icTH1e
+        dvc remote modify drive gdrive_acknowledge_abuse true
+
+    - name: Commit and Push Changes
+      run: |
+        dvc push
+        git add .dvc/config
+        git commit -m "Adding data to remote"
+        git push origin i200603
