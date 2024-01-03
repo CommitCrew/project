@@ -19,4 +19,4 @@ jobs:
 
     - name: Run Docker container
       run: |
-        docker run -d --name my_container commitcrew/ca3:latest
+        docker run -p 8080:8080 commitcrew/project:1.0
