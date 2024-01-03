@@ -1,9 +1,0 @@
-schema: '2.0'
-stages:
-  generate_data:
-    cmd: python src/random_data.py
-    outs:
-    - path: dummy_sensor_data.csv
-      hash: md5
-      md5: 38aa3ce9039f10a86d8ea354c5b58047
-      size: 208071

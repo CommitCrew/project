@@ -1,5 +1,0 @@
-stages:
-  generate_data:
-    cmd: python src/random_data.py
-    outs:
-      - dummy_sensor_data.csv
