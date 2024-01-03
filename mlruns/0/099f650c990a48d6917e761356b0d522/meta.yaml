@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/University/Semester%207/MLOPs/Project/project/src/mlruns/0/099f650c990a48d6917e761356b0d522/artifacts
+end_time: 1704221214549
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 099f650c990a48d6917e761356b0d522
+run_name: orderly-ape-609
+run_uuid: 099f650c990a48d6917e761356b0d522
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704221206652
+status: 3
+tags: []
+user_id: hadiy
