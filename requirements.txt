@@ -4,3 +4,4 @@ numpy
 dvc 
 dvc-gdrive
 scikit-learn
+mlflow
