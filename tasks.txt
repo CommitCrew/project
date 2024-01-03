@@ -1,0 +1,12 @@
+20I-0579:
+Data preprocessing
+Model Training
+
+20I-0603:
+Data Acquisition 
+DVC pipeline
+Deployment
+
+20I-0711:
+Model Training
+Deployment
