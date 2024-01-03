@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Reading Prediction</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Reading Prediction</h1>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <div class="upload-box" id="drop-area">
+                <div class="drop-area-text">
+                    <label for="csvFile" class="custom-file-upload">
+                        Upload CSV File:
+                        <input type="file" name="file" accept=".csv,.txt" id="csvFile" class="form-control-file" onchange="displayFileName(this)">
+                        <span id="file-chosen">No file chosen</span>
+                    </label>
+                    <script>
+                        function displayFileName(input) {
+                            var fileName = input.files[0].name;
+                            document.getElementById('file-chosen').textContent = fileName;
+                        }
+                    </script>                   
+                </div>
+            </div>
+            <button type="submit" id="calculateButton">Calculate</button>
+        </form>
+
+    
+
+      <form>
+        <table>
+            <tr>
+                <th>Row</th>
+                <th>Machine ID</th>
+                <th>Sensor ID</th>
+                <th>Prediction</th>
+            </tr>
+            {% for data in combined_data %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ data[0] }}</td>
+                <td>{{ data[1] }}</td>
+                <td>{{ data[2] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </form>
+</body>
+</html>
