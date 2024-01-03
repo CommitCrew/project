@@ -1,0 +1,17 @@
+stages:
+  generate_data:
+    cmd: python src/random_data.py
+    deps:
+      - src/random_data.py
+    outs:
+      - dummy_sensor_data.csv
+  process_data:
+    cmd: python datapreprocessing.py
+    deps:
+      - dummy_sensor_data.csv 
+  train_data:
+    cmd: python modeltraining.py
+    deps:
+      - modeltraining.py
+      - preprocesseddata.csv
+    
