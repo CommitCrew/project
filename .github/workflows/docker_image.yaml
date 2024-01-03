@@ -1,0 +1,22 @@
+name: Docker Image
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Build the Docker image
+      run: |
+        docker build -t commitcrew/project:latest .
+
+    - name: Run Docker container
+      run: |
+        docker run -d --name my_container commitcrew/ca3:latest
