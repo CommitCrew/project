@@ -32,7 +32,7 @@ dataframe['NumericSensor_ID'] = extractID(dataframe['Sensor_ID'])
 dataframe["NormalizedReading"] = normalize_reading(dataframe["Reading"])
 
 # DROPPING COLUMNS NOT REQUIRED (USING THE NEWLY GENERATED PRE PROCESSED COLUMNS INSTEAD)
-columns_to_drop = ['Timestamp', 'Machine_ID', 'Sensor_ID']
+columns_to_drop = ['Timestamp', 'Machine_ID', 'Sensor_ID','Reading']
 dataframe.drop(columns=columns_to_drop, inplace=True)
 
 # NAMING THE PRE PROCESSED DATA FILE

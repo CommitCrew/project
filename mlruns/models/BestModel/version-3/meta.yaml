@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1704280009032
+current_stage: None
+description: null
+last_updated_timestamp: 1704280009032
+name: BestModel
+run_id: 91e56d9c55e346b1b3368224c38af414
+run_link: null
+source: file:///D:/University/Semester%207/MLOPs/Project/project/src/mlruns/0/91e56d9c55e346b1b3368224c38af414/artifacts/BestModel
+status: READY
+status_message: null
+storage_location: file:///D:/University/Semester%207/MLOPs/Project/project/src/mlruns/0/91e56d9c55e346b1b3368224c38af414/artifacts/BestModel
+user_id: null
+version: 3

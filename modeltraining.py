@@ -8,7 +8,7 @@ from sklearn.metrics import mean_squared_error
 import mlflow
 import mlflow.sklearn
 import joblib
-
+import pickle
 #--------------------------------------------------------------- MODEL TRAINING -------------------------------------------------------
 
 #IMPORTING PREPROCESSED NORMALIZED DATA INTO A DATAFRAME
@@ -110,6 +110,7 @@ with mlflow.start_run() as run:
     # SAVING THE BEST SELECTED MODEL USING JOBLIB
     BestModelfilename = 'model/BestModel.joblib'
     joblib.dump(BestModel, BestModelfilename)
+    pickle.dump(BestModel, open('model/model.pkl', 'wb'))
 
     # REGISTING THE BEST MODEL IN MLFLOW REGISTRY
     model_name = "BestModel"
